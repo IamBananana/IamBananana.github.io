@@ -1,3 +1,14 @@
 body {
     background-color: burlywood;
 }
+
+.menybar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#headerpicture {
+    background-image: url(bilder/header.jpg);
+    padding-top: 100px;
+    background-size: cover;
+}

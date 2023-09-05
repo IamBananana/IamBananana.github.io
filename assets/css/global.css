@@ -14,7 +14,7 @@ body {
 }
 
 /*---------Kontor---------------------------------------------------------*/
-html, body, center{
+html, body, center, form{
     height: 100%;
 }
 #innhold_k{

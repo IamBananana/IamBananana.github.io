@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bø industribedrift-nettside </title>  
+<!--Link til css-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <img src="Bø logo.png"alt="Bø industri logo" width="1450" height="250">
+
+
+ <div class="toppen"><h1> <strong> Kontakt-skjema </strong></h1>
+  </div>
+ 
+  <p>Har du spørsmål eller ønsker å samarbeide med oss på ditt neste prosjekt?</p>
+   <p>Vennligst ta kontakt med vårt dedikerte team, og vi vil gjerne hjelpe deg med å finne de beste løsningene for din behov.</p>
+   <p>Adresse: Industriveien 21</p>
+   <P>Telefon_ 00000000</P>
+   <p>E-post:BØINDUSTRI@GMAIL.COM</p>
+
+
+
+<a href="Bøindustri@gmail.com">Send oss en e-post</a>
+<form action="#"><br>
+
+<div>
+  <label> Fullt navn: </label> 
+  <input> 
+</div><br>
+      
+<div>
+  <label> E-post:</label>
+  <input>
+</div><br>
+
+<div>
+ <label> Telefon:</label>
+  <input>
+</div><br>
+
+<div>
+  <label> Adresse:</label>
+  <input>
+</div><br>
+
+        
+<div>
+ <label> Postnummer:</label>
+ <input>
+</div><br>
+
+
+
+<div>
+<label> Melding:</label>
+<textarea class="textarea1"></textarea>
+</div>
+
+      <button>Send beskjed</button>
+    </form>
+
+
+<h1></h1><br>
+  <label for="menu"> Kontor-rekvista</label>
+  <select id="menu">
+    <option value="Tjenester">Gamimingstol </option>
+    <option value="Maskiner">Kontorstol </option>
+    <option value="Kontor utstyr">Kontorbord </option>
+  </select>
+  <br>
+
+
+
+  <label for="menu1"> Tjenester</label>
+  <select id="menu1">
+    <option value="Tjenester">Instalasjon og oppsett av overvåkensysstemer </option>
+    <option value="Maskiner">Instalasjon og oppsett av automatiske føråpnere </option>
+    <option value="Kontor utstyr">Innstalasjon og oppsett av automatiske Kaffemaskiner</option>
+</select><br>
+
+<label for="menu2">Maskiner</label>
+  <select id="menu2">
+    <option value="Tjenester">Gressklypper </option>
+    <option value="Maskiner">Snøfresere</option>
+    <option value="Kontor utstyr">stubbefjernere</option>
+</select>
+<br>
+
+
+ <!--Logo sosiale medier (F,T,L)--> 
+<footer>
+  <p>@ 2023 Bø Industribedrift</p>
+  <a href="#">
+    <img src="facebook-icon-512x511-ircc9ves.png"
+    alt="Følg meg på Faceboock"
+    width="24"
+    height="24">
+  </a>
+    <a href="#">
+      <img src="Logo_of_Twitter.svg.png"
+      alt="Følg meg på Twitter"
+      width="24"
+      height="24">
+      </a>
+
+    <a href="#">
+        <img src="LinkedIn_logo_initials.png.webp"
+        alt="Følg meg på LinkedIn"
+        width="24"
+        height="24">
+    </a>
+</footer>
+
+
+<nav>
+    <ul>
+        <li><a href="#Om oss">Om oss</a></li>
+        <li><a href="#Kontor produkter">Kontor produkter</a></li>
+        <li><a href="#Tjenester">Tjenester</a></li>
+        <li><a href="#Butikk">Butikk</a></li>
+        <li><a href="#Kontakt oss">Kontakt oss</a></li>
+  </ul>
+</nav>
+
+
+  <h2 id="Om oss"></h2>
+
+  <h2 id="Kontor produkter"></h2>
+    
+  <h2 id="Butikk"></h2>
+  
+
+</body>
+
+
+ 
+
+
+    
+<a href="https://www.mozilla.org/nb-NO/firegox/new/" target="_target="_blank"> Last ned Firefox</a>
+</html>

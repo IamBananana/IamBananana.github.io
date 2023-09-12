@@ -93,7 +93,7 @@ h3{
     display: flex;
     position: relative;
     width: 11.5%;
-    margin-top: 6%;
+    margin-top: 8%;
     justify-content: space-between;
     white-space: nowrap;
 }
@@ -109,3 +109,37 @@ h3{
     cursor: pointer;
 }
 /*------------------------------------------------------------------------*/
+.menybar h2 a, .menybar h2 a:visited {
+    text-decoration: none;
+    color: rgb(134, 99, 0);
+    border: 2px solid rgb(134, 99, 0);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.menybar h2 a:hover {
+    text-decoration: underline;
+    color: brown;
+    border-color: brown;
+}
+
+.menybar {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.hovedtittel {
+    display: flex;
+    justify-content: center;
+    color: black;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+h1 a, h1 a:visited {
+    text-decoration: none;
+    color: rgb(82, 65, 19);
+}
+h1 a:hover {
+    text-decoration: underline;
+    color: orangered;
+}

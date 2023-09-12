@@ -35,10 +35,19 @@ body {
     font-family: sans-serif, Arial, Helvetica;
 }
 
-#adresse {
+.footer {
+    position: relative;
+    background-color: #3f13138e;
+    padding: 20px 0;
+    padding-bottom: 15px;
+    margin-top: 4%;
     text-align: center;
-
-    background-color: cadetblue;
+}
+.footer-image {
+    width: 100%;
+    max-height: 46vh;
+    height: auto;
+    object-fit: cover;
 }
 
 .leggtil {
@@ -73,6 +82,7 @@ body {
     grid-template-columns: auto auto auto auto;
     justify-content: space-between;
 }
+
 
 .antalltekst {
     display: grid;
@@ -132,4 +142,5 @@ table, th, td {
 button {
     padding: 12px 28px;
 }
+
 

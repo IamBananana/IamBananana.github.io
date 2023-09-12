@@ -1,33 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bø industribedrift-nettside </title>  
-<!--Link til css-->
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bø Industribedrift hjemmeside</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 <body>
-
-  <img src="Bø logo.png"alt="Bø industri logo" width="1450" height="250">
-
-
+  <h1 Hjemmeside meny></h1>
+  <nav class="nav">
+    <ul class="nav__menu">
+      <li class="nav__menu-item"><a>Om oss</a></li>
+      <li class="nav__menu-item"><a>Hjem</a>
+        <ul class="nav__submenu"> 
+          <li class="nav__submenu-item"><a href="#">Kontor-rekvista</a></li>
+          <li class="nav__submenu-item"><a href="#">Maskiner</a></li>
+          <li class="nav__submenu-item"><a href="#">Instalasjon</a></li>
+        </ul>
+            </li>
+            <li class="nav__menu-item"><a href="#">Kontorprodukter</a>
+              <ul class="nav__submenu">
+                <li class="nav__submenu-item"><a href="#">Om oss</a></li>
+                <li class="nav__submenu-item"><a href="#">Tjenester </a></li>
+                <li class="nav__submenu-item"><a href="#">O</a></li>
+              </ul>
+            </li>
+            <li class="nav__menu"><a href="#">Tjenester</a></li>
+            <li class="nav__menu"><a href="#">Kontakt oss</a></li>
+      </ul>
+  </nav>
+</body>
  <div class="toppen"><h1> <strong> Kontakt-skjema </strong></h1>
   </div>
- 
   <p>Har du spørsmål eller ønsker å samarbeide med oss på ditt neste prosjekt?</p>
    <p>Vennligst ta kontakt med vårt dedikerte team, og vi vil gjerne hjelpe deg med å finne de beste løsningene for din behov.</p>
    <p>Adresse: Industriveien 21</p>
    <P>Telefon_ 00000000</P>
    <p>E-post:BØINDUSTRI@GMAIL.COM</p>
 
-
-
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Bø Industribedrift hjemmeside</title>
+   <link rel="stylesheet" href="css/style.css">
 <a href="Bøindustri@gmail.com">Send oss en e-post</a>
 <form action="#"><br>
-
 <div>
   <label> Fullt navn: </label> 
   <input> 
@@ -37,7 +55,6 @@
   <label> E-post:</label>
   <input>
 </div><br>
-
 <div>
  <label> Telefon:</label>
   <input>
@@ -46,25 +63,17 @@
 <div>
   <label> Adresse:</label>
   <input>
-</div><br>
-
-        
+</div><br>     
 <div>
  <label> Postnummer:</label>
  <input>
 </div><br>
-
-
-
 <div>
 <label> Melding:</label>
 <textarea class="textarea1"></textarea>
 </div>
-
       <button>Send beskjed</button>
     </form>
-
-
 <h1></h1><br>
   <label for="menu"> Kontor-rekvista</label>
   <select id="menu">
@@ -73,9 +82,6 @@
     <option value="Kontor utstyr">Kontorbord </option>
   </select>
   <br>
-
-
-
   <label for="menu1"> Tjenester</label>
   <select id="menu1">
     <option value="Tjenester">Instalasjon og oppsett av overvåkensysstemer </option>
@@ -90,8 +96,6 @@
     <option value="Kontor utstyr">stubbefjernere</option>
 </select>
 <br>
-
-
  <!--Logo sosiale medier (F,T,L)--> 
 <footer>
   <p>@ 2023 Bø Industribedrift</p>
@@ -107,7 +111,6 @@
       width="24"
       height="24">
       </a>
-
     <a href="#">
         <img src="LinkedIn_logo_initials.png.webp"
         alt="Følg meg på LinkedIn"
@@ -115,8 +118,6 @@
         height="24">
     </a>
 </footer>
-
-
 <nav>
     <ul>
         <li><a href="#Om oss">Om oss</a></li>
@@ -126,21 +127,9 @@
         <li><a href="#Kontakt oss">Kontakt oss</a></li>
   </ul>
 </nav>
-
-
   <h2 id="Om oss"></h2>
-
   <h2 id="Kontor produkter"></h2>
-    
   <h2 id="Butikk"></h2>
-  
-
-</body>
-
-
- 
-
-
-    
+</body> 
 <a href="https://www.mozilla.org/nb-NO/firegox/new/" target="_target="_blank"> Last ned Firefox</a>
 </html>

@@ -132,10 +132,12 @@ h3{
     display: flex;
     justify-content: center;
     color: black;
+    padding-bottom: 2%;
 }
 h1 a, h1 a:visited {
     text-decoration: none;
     color: rgb(82, 65, 19);
+    padding-bottom: 3
 }
 h1 a:hover {
     text-decoration: underline;

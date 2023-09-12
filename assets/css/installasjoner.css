@@ -26,6 +26,8 @@
     display: flex;
     justify-content: center;
     color: black;
+    padding-top: 3%;
+    padding-bottom: 2%;
 }
 h1 a, h1 a:visited {
     text-decoration: none;
@@ -123,6 +125,8 @@ body {
     display: grid;
     grid-template-columns: 16fr;
     padding-top: 7%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .tablecontainer {
@@ -145,5 +149,8 @@ table, th, td {
 button {
     padding: 12px 28px;
 }
+
+
+
 
 

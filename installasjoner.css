@@ -1,25 +1,22 @@
 
-#menybartekst {
-    text-decoration: none;
-    color: white;
+*,*::before,*::after{
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    background-image: linear-gradient(to right, gray, rgb(8, 115, 127, 0.6), gray); 
-    
+    background-color: burlywood;
+    font-family: sans-serif, Arial, Helvetica;
 }
 
 .menybar {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    margin-left: 24%;
-    background-color: cadetblue;
 }
 
 #headerpicture {
-    background-image: url(header.png);
-    padding-top: 200px;
+    background-image: url(assets/header.jpg);
+    padding-top: 100px;
     background-size: cover;
 }
 

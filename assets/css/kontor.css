@@ -1,3 +1,18 @@
+/*---------[Body]-----------------------------------------------------------*/
+body {
+    background-color: burlywood;
+}
+
+.menybar {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#headerpicture {
+    background-image: url(assets/header.jpg);
+    padding-top: 100px;
+    background-size: cover;
+}
 /*---------[Kontor]---------------------------------------------------------*/
 html, body, center,form{
     height: 100%;

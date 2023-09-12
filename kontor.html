@@ -4,48 +4,215 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="assets/css/global.css">
+        <link rel="stylesheet" href="assets/css/index.css">
+        <link rel="stylesheet" href="assets/css/kontor.css">
     </head>
     
     <body>
         <center>
-            <br>
-            <div id="top_box">
-                <div id="valgt_meny">Kontor</div>
-            </div>
-            <div id="innhold_k">
-                <h3>Velg type vare</h3>
-                <select id="lstMøbler">
-                    <option value="">Møbler</option>
-                    <option>Pult</option>
-                    <option>Stol</option>
-                </select>
-                <select id="lstKontorrekvisita">
-                    <option value="">Kontorrekvisita</option>
-                    <option>Kaffe</option>
-                    <option>Ark</option>
-                    <option>Penn</option>
-                </select>
+            <form id="skjema_k">
+                <div class="hovedtittel">
+                    <h1 id="logo"><a href="index.html">Bø Industribedrift</a></h1>
+                </div>
+                <div class="menybar">
+                    <h2><a href="kontor.html">Våre produkter</a></h2>
+                    <h2><a href="installasjoner.html">Installasjoner</a></h2>
+                    <h2><a href="maskiner.html">Utleie av maskiner</a></h2>
+                    <h2><a href="Kontakt.html">Kontakt oss</a></h2>
+                </div>
                 <br><br>
-                <div id="txtInputs">
-                    Antall <span id="valgt_vare">Stoler: </span><input type="number">
+                <div id="top_box">
+                    <div id="valgt_meny">Produkter</div>
                 </div>
-                <div id="vare">
-                    <div id="infoVare">Info Om Vare BLA BLA BLA BLA BLA BLA</div>
-                    <div id="image"><img id="img_produkt" src="stol1.avif"></div>
+                <div id="outerLayer_k">
+                    <div id="main">
+                        <h3>Velg type vare</h3>
+                        <select id="lstMøbler" class="select" onchange="visInputs()">
+                            <option value="">Møbler</option>
+                            <option>Pult</option>
+                            <option>Stol</option>
+                        </select>
+                        <select id="lstKontorrekvisita" class="select" onchange="visInputs()">
+                            <option value="">Kontorrekvisita</option>
+                            <option>Kaffe</option>
+                            <option>Ark</option>
+                            <option>Penn</option>
+                        </select>
+                        <br><br>
+                        <div id="innerLayer_k">
+                            <div id="txtInputs">
+                                <span id="valgt_vare"></span> Antall:<input id="inpAntall" type="number" required>
+                                <br><br>
+                                <div id="txtType">
+                                    Type: 
+                                    <select id="lstType" onchange="visVare()">
+                                        <option value="">Velg Type</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div id="txtFarge">
+                                    Farge: 
+                                    <select id="lstFarge">
+                                        <option value="">Velg Farge</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div id="vare">
+                                <div id="infoVare"></div>
+                                <div id="image_vare"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="btnS_k">
+                        <button type="submit" class="btn_k">Legg til</button>
+                        <button type="reset" class="btn_k">Avbryt</button>
+                    </div>
                 </div>
-            </div>
-            <div id="handlevogn">
-                <div id="banner_handlevogn"><div id="handlevogn_title">Handlevogn</div></div>
-                <ol>
-                    <li>3x - Pakker Kaffe</li>
-                    <li>6x - Kontor Stoler</li>
-                    <li>4x - Pulter</li>
-                    <li>20x - Penner</li>
-                </ol>
-                <div id="txtSum">12 458 kr</div>
-            </div>
+                <div id="handlevogn">
+                    <div id="banner_handlevogn"><div id="handlevogn_title">Handlevogn</div></div>
+                    <ol id="handlevognList"></ol>
+                    <div id="txtSum"></div>
+                </div>
+            </form>
         </center>
         
-        <script></script>
+        <script>
+            //Variabler
+            let txtInputs = document.getElementById("txtInputs");
+            let lstMøbler = document.getElementById("lstMøbler");
+            let lstKontorrekvisita = document.getElementById("lstKontorrekvisita");
+            let infoVare = document.getElementById("infoVare");
+            let image_vare = document.getElementById("image_vare");
+            
+            let lstFarge = document.getElementById("lstFarge");
+            let lstType = document.getElementById("lstType");
+            let txtType = document.getElementById("txtType");
+            let txtFarge = document.getElementById("txtFarge");
+            let valgt_vare = document.getElementById("valgt_vare");
+            
+            let hanldevogn = document.getElementById("handlevogn");
+            let handlevognList = document.getElementById("handlevognList");
+            let txtSum = document.getElementById("txtSum");
+            let inpAntall = document.getElementById("inpAntall");
+            
+            let inputsArray = [];
+            let sumArray = [];
+            let sumTotal = 0;
+            let currentVare = '';
+            let currentType = '';
+            
+            inputsArray = [
+                {'vare':"Stol", 'type':["Kontorstol", "Vanlig Stol"],'farge':["Grå", "Svart", "Hvit"], 'img':["stol_1","stol_2"], 'pris':[4090,2350], 'Info':["Kontorstol KENSON Kasper Light", "Stol Monroe 966A"]},
+                {'vare':"Pult", 'type':["Hjørneskrivebord", "Skrivebord"], 'farge':["Grå", "Beige", "Hvit"], 'img':["hjørneskrivebord","skrivebord"], 'pris':[3618, 1599], 'Info':["Hjørneskrivebord FLEXUS","Skrivebord STAUNING 80x160 svart"]},
+                {'vare':"Ark", 'type':["A4"],'farge':[], 'img':["A4_ark"], 'pris':[45], 'Info':["500x - A4"]},
+                {'vare':"Kaffe", 'type':["EVERGREEN"],'farge':[], 'img':["kaffe"], 'pris':[100], 'Info':["EVERGOOD KAFFE"]},
+                {'vare':"Penn", 'type':["kulepenn"],'farge':["Svart", "Blå"], 'img':["penn"], 'pris':[50], 'Info':["kulepenn Bic Cristal M"]}
+            ];
+            
+            
+            //Program
+            txtInputs.style.display = "none";
+            hanldevogn.style.display = "none";
+            document.getElementById("vare").style.display = "none";
+            
+            visInputs();
+            
+            //Funksjoner
+            function visInputs(){
+                //Går ut hvis default/ingen vare valgt
+                if(lstKontorrekvisita.value == "" && lstMøbler.value == ""){
+                    //console.log(true, lstMøbler.value);
+                    txtInputs.style.display = "none";
+                    console.log("return");
+                    return
+                }
+                //Viser inputs hvis det er valgt vare
+                else{
+                    txtInputs.style.display = "block";
+                    
+                    let array = [lstKontorrekvisita.value, lstMøbler.value];
+                    
+                    //Hele denne setter inn riktig info utfra vare du valgte
+                    for(let a=0; a<inputsArray.length; a++){
+                        y = false;
+                        for(let i=0; i<array.length; i++){if(array[i] == inputsArray[a].vare){y = true}};
+                        lstKontorrekvisita.value = "";
+                        lstMøbler.value = "";
+                        console.log(y);
+                        if(y == true){
+                            console.log(true)
+                            currentVare = a;
+                            valgt_vare.innerHTML = `${inputsArray[a].vare}`;
+                            
+                            if(inputsArray[a].farge.length == 0){
+                                txtFarge.style.display = "none";
+                                console.log("farge.display: none");
+                            }
+                            else{
+                                txtFarge.style.display = "block";
+                                lstFarge.innerHTML = '<option value="">Velg Farge</option>';
+                                for(let i=0; i<inputsArray[i].farge.length; i++){
+                                    lstFarge.innerHTML += `
+                                    <option>${inputsArray[a].farge[i]}</option>`;
+                                }
+                            }
+                            
+                            if(inputsArray[a].type.length == 0){
+                                txtType.style.display = "none"; 
+                                console.log("type.display: none");
+                            }
+                            else{
+                                txtType.style.display = "block";
+                                lstType.innerHTML = '<option value="">Velg Type</option>';
+                                for(let i=0; i<inputsArray[i].type.length; i++){
+                                    lstType.innerHTML += `
+                                    <option>${inputsArray[a].type[i]}</option>`;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            //Sette inn bilde og info utfra vare man velger
+            function visVare(){
+                document.getElementById("vare").style.display = "block";
+                //Finn type valgt
+                for(let i=0; i<inputsArray[currentVare].type.length; i++){
+                    if(lstType.value == inputsArray[currentVare].type[i]){
+                        currentType = i;
+                        console.log(currentVare,i);
+                        image_vare.innerHTML = `<img id="img_produkt" src="assets/images/Kontor_Varer/${inputsArray[currentVare].img[i]}.jpg">`;
+                        console.log("img",inputsArray[0].img[0]);
+                        infoVare.innerHTML = `<h3>${inputsArray[currentVare].Info[i]}</h3>`;
+                   }
+                }
+            }
+            
+            //Utregner formsen
+            skjema_k.onsubmit = function(evt){
+                evt.preventDefault();
+                
+                
+                let valgtType = inputsArray[currentVare].type;
+                
+                if(hanldevogn.style.display = "none"){hanldevogn.style.display = "block"};
+                
+                if(0 < inpAntall.value && lstType.value != ""){
+                        var sum = inpAntall.value * inputsArray[currentVare].pris[currentType];
+                    }
+                else{
+                    return
+                }
+                //Legge til i handlevogn
+                let endelse = "er";
+                if(inputsArray[currentVare].vare == "Kaffe" || inputsArray[currentVare].vare == "Ark" || inputsArray[currentVare].vare == "Pult"){endelse = ""}
+                handlevognList.innerHTML += `<li>${inpAntall.value}x ${inputsArray[currentVare].type[currentType]}${endelse} - ${sum} kr</li>`;
+                
+                sumTotal += sum;
+                txtSum.innerHTML = `Totalt: ${sumTotal} kr`;
+               }
+            
+        </script>
     </body>
 </html>

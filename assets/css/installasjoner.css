@@ -123,8 +123,6 @@ body {
     display: grid;
     grid-template-columns: 16fr;
     padding-top: 7%;
-    margin-right: 5%;
-    margin-left: 5%;
 }
 
 .tablecontainer {

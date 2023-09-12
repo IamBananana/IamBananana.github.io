@@ -23,71 +23,97 @@
 
     <div class="container">
 
-    <div class="pnavn">
-      <p>Overvåkningssystem</p>
-      <p>Aircondition</p>
-      <p>Lyssensor</p>
-      <p>Bilalarm</p>
-    </div>
-    
-    <div class="produktbilder"> 
-      <img src="kamerabilder.png" style="padding-right: 5%; padding-left: 5%;" width="200px" alt="kamerabilde">
-      <img src="aircondition.png" style="padding-left: 3%;" width="200px" alt="aircondition">
-      <img src="lyssensor.png" style="padding-left: 5%;" width="200px" alt="lyssensor">
-      <img src="bilalarm.png" style="padding-left: 3%;" width="200px" alt="bilalarm">
-    </div>
-
-    <div class="antalltekst">
-      <p style="padding-left: 330%;">Antall:</p>
-      <p style="padding-left: 340%;">Antall:</p>
-      <p style="padding-left: 140%;">Antall:</p>
-      <p style="padding-right: 65px;">Antall:</p>
-    </div>
-
-    <div class="antall">
-      <input type="number" style="margin-left: 60%; margin-right: 50%; padding-left: 100%;">
-      <input type="number" style="margin-left: 70%; margin-right: 50%; padding-left: 100%;">
-      <input type="number" style="margin-left: 23%; margin-right: 50%; padding-left: 100%;">
-      <input type="number" style="margin-left: -10%; margin-right: 50%; padding-left: 100%;">
-    </div>
-
-    <div class="leggtil">
-      <button style="margin-left: -20px;" onclick="myFunction()">Legg til</button>
-      <button style="margin-left: 65px;" onclick="myFunction()">Legg til</button>
-      <button style="margin-left: -20px;" onclick="myFunction()">Legg til</button>
-      <button style="margin-right: 40px;" onclick="myFunction()">Legg til</button>
-    </div>
-
-    <p id="demo"></p>
-
-<script>
-function myFunction() {
-  var txt;
-  if (confirm("Er du sikker på at du vil legge til varen i handlekurven?")) {
-    txt = "";
-  } else {
-    txt = "";
+      <div class="pnavn">
+        <p>Overvåkningssystem</p>
+        <p>Aircondition</p>
+        <p>Lyssensor</p>
+        <p>Bilalarm</p>
+      </div>
+      
+      <div class="produktbilder"> 
+        <img src="kamerabilder.png" style="padding-right: 5%; padding-left: 5%;" width="200px" alt="kamerabilde">
+        <img src="aircondition.png" style="padding-left: 5%;" width="200px" alt="aircondition">
+        <img src="lyssensor.png" style="padding-left: 5%;" width="200px" alt="lyssensor">
+        <img src="bilalarm.png" style="padding-left: 4%;" width="200px" alt="bilalarm">
+      </div>
+  
+      <div class="antalltekst">
+        <p style="padding-left: 330%;">Antall:</p>
+        <p style="padding-left: 310%;">Antall:</p>
+        <p style="padding-left: 150%;">Antall:</p>
+        <p style="padding-right: 70px;">Antall:</p>
+      </div>
+  
+      <div class="antall">
+  
+          <input type="number" style="margin-left: 80px;">
+          <input type="number" style="margin-left: 150px;">
+          <input type="number" style="margin-left: 90px;">
+          <input type="number" style="margin-left: 90px;">
+  
+      </div>
+  
+      <div class="leggtil">
+        <button style="margin-left: 8px;" onclick="myFunction()">Legg til</button>
+        <button style="margin-left: 60px;" onclick="myFunction()">Legg til</button>
+        <button style="margin-left: 3px;" onclick="myFunction()">Legg til</button>
+        <button style="margin-right: 35px;" onclick="myFunction()">Legg til</button>
+      </div>
+  
+      <p id="demo"></p>
+  
+  <script>
+  function myFunction() {
+    var txt;
+    if (confirm("Er du sikker på at du vil legge til varen i handlekurven?")) {
+      txt = "";
+    } else {
+      txt = "";
+    }
+    document.getElementById("demo").innerHTML = txt;
   }
-  document.getElementById("demo").innerHTML = txt;
-}
-</script>
-
-    <div class="tablecontainer">
-    <div class="kamera" style="padding-left: 35%;">
-    
+  </script>
+  
+      <div class="tablecontainer">
+      <div class="kamera" style="padding-left: 30%;">
+      
+        <table>
+        <tbody>
+          <tr>
+          <th>Høyde</th>
+          <td>20cm</td>
+        </tr>
+        <tr>
+          <th>Bredde</th>
+          <td>11cm</td>
+        </tr>
+        <tr>
+          <th>Vekt</th>
+          <td>0,3kg</td>
+        </tr>
+        <tr>
+          <th>Garanti</th>
+          <td>12 mnd</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="aircondition" style="padding-left: 45%;">
+      
       <table>
       <tbody>
         <tr>
         <th>Høyde</th>
-        <td>20cm</td>
+        <td>80cm</td>
       </tr>
       <tr>
         <th>Bredde</th>
-        <td>11cm</td>
+        <td>50cm</td>
       </tr>
       <tr>
         <th>Vekt</th>
-        <td>0,3kg</td>
+        <td>3,4kg</td>
       </tr>
       <tr>
         <th>Garanti</th>
@@ -96,22 +122,22 @@ function myFunction() {
       </tbody>
     </table>
   </div>
-
-  <div class="aircondition" style="padding-left: 50%;">
-    
+  
+  <div class="lyssensor" style="padding-left: 25%;">
+      
     <table>
     <tbody>
       <tr>
       <th>Høyde</th>
-      <td>80cm</td>
+      <td>12cm</td>
     </tr>
     <tr>
       <th>Bredde</th>
-      <td>50cm</td>
+      <td>6cm</td>
     </tr>
     <tr>
       <th>Vekt</th>
-      <td>3,4kg</td>
+      <td>0,2kg</td>
     </tr>
     <tr>
       <th>Garanti</th>
@@ -119,80 +145,56 @@ function myFunction() {
     </tr>
     </tbody>
   </table>
-</div>
-
-<div class="lyssensor" style="padding-left: 23%;">
-    
-  <table>
-  <tbody>
-    <tr>
-    <th>Høyde</th>
-    <td>12cm</td>
-  </tr>
-  <tr>
-    <th>Bredde</th>
-    <td>6cm</td>
-  </tr>
-  <tr>
-    <th>Vekt</th>
-    <td>0,2kg</td>
-  </tr>
-  <tr>
-    <th>Garanti</th>
-    <td>12 mnd</td>
-  </tr>
-  </tbody>
-</table>
-</div>
-
-<div class="bilalarm">
-    
-  <table>
-  <tbody>
-    <tr>
-    <th>Høyde</th>
-    <td>6cm</td>
-  </tr>
-  <tr>
-    <th>Bredde</th>
-    <td>3cm</td>
-  </tr>
-  <tr>
-    <th>Vekt</th>
-    <td>0,1kg</td>
-  </tr>
-  <tr>
-    <th>Garanti</th>
-    <td>12 mnd</td>
-  </tr>
-  </tbody>
-</table>
-</div>
-
-</div>
-</div>
-</div>
-
-
-
- 
-<div id="adresse">
-  <p> 
-    <br />  
-    <address>Campus Bø Studentbolig<br />    
-        <a href="https://www.google.com/maps/place/Gullbringvegen+30,+3800+Bø/@59.4119798,9.0588972,17z/data=!3m1!4b1!4m6!3m5!1s0x464749482f5b7b5f:0x6869a93b881fbeaf!8m2!3d59.4119798!4d9.0614721!16s%2Fg%2F11c212s1w3?entry=ttu">       
-          Gullbringvegen 30, 3800 Bø i Telemark</a><br />
-          ulrikke@ekedal.no<br />
-              +47 41 33 00 57<br />
-              <div id="footer">
-                <br />
-                  &copy; copyright 2023 Bø Industribedrift<br>
-              </div>
-              <br />
-          </div>
-  </address>
-</p>
-</div>
+  </div>
   
-  </body>
-</html>
+  <div class="bilalarm" style="padding-left: 10px;">
+      
+    <table>
+    <tbody>
+      <tr>
+      <th>Høyde</th>
+      <td>6cm</td>
+    </tr>
+    <tr>
+      <th>Bredde</th>
+      <td>3cm</td>
+    </tr>
+    <tr>
+      <th>Vekt</th>
+      <td>0,1kg</td>
+    </tr>
+    <tr>
+      <th>Garanti</th>
+      <td>12 mnd</td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  
+  
+  
+   
+  <div id="adresse">
+    <p> 
+      <br />  
+      <address>Campus Bø Studentbolig<br />    
+          <a href="https://www.google.com/maps/place/Gullbringvegen+30,+3800+Bø/@59.4119798,9.0588972,17z/data=!3m1!4b1!4m6!3m5!1s0x464749482f5b7b5f:0x6869a93b881fbeaf!8m2!3d59.4119798!4d9.0614721!16s%2Fg%2F11c212s1w3?entry=ttu">       
+            Gullbringvegen 30, 3800 Bø i Telemark</a><br />
+            ulrikke@ekedal.no<br />
+                +47 41 33 00 57<br />
+                <div id="footer">
+                  <br />
+                    &copy; copyright 2023 Bø Industribedrift<br>
+                </div>
+                <br />
+            </div>
+    </address>
+  </p>
+  </div>
+    
+    </body>
+  </html>
